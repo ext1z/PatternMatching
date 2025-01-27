@@ -69,7 +69,10 @@ class Program
     }
 }
 
-abstract class Shape;
+abstract class Shape
+{
+    
+}
 
 class Circle : Shape
 {
