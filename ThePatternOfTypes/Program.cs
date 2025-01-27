@@ -24,8 +24,8 @@ class Program
 {
     static void Main(string[] args)
     {
-        Emplyoee managerBob = new Manager("ManagerBob", "Little manager", 1);
-        Emplyoee developerTom = new Developer("TomDeveloper", "Senior", "C");
+        Employee managerBob = new Manager("ManagerBob", "Little manager", 1);
+        Employee developerTom = new Developer("TomDeveloper", "Senior", "C");
 
         var result = DescribeEmployee(managerBob);
         var result2 = DescribeEmployee(developerTom);
@@ -37,7 +37,7 @@ class Program
 
     }
 
-    static string DescribeEmployee(Emplyoee emplyoee)
+    static string DescribeEmployee(Employee emplyoee)
     {
         switch (emplyoee)
         {
@@ -52,12 +52,12 @@ class Program
 
 }
 
-class Emplyoee
+class Employee
 {
     public string Name { get; set; }
     public string Position { get; set; }
 
-    public Emplyoee(string name, string position)
+    public Employee(string name, string position)
     {
         Name = name;
         Position = position;
@@ -65,7 +65,7 @@ class Emplyoee
 }
 
 
-class Manager : Emplyoee
+class Manager : Employee
 {
     public int NumberOfProjects { get; set; }
 
@@ -75,7 +75,7 @@ class Manager : Emplyoee
     }
 }
 
-class Developer : Emplyoee
+class Developer : Employee
 {
     public string ProgrammingLanguages { get; set; }
 
